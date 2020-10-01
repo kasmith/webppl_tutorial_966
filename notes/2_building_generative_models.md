@@ -212,7 +212,7 @@ display ("Josh's strength is: " + strength('josh'))
 Note that we don't have to worry about equal strengths here -- because these numbers are pulled from a continuous distribution, they will never be exactly equal
 -->
 
-4. Recursion (BONUS). Try to build the following procedure: You take a coin, and flip it. If the coin returns `true` ("heads"), stop. If the coin returns `false` ("tails"), then flip the coin again. Keep going in this manner, counting up the total number of tails you see before you hit tails.
+4. Recursion (BONUS). Try to build the following procedure: You take a coin, and flip it. If the coin returns `true` ("heads"), stop. If the coin returns `false` ("tails"), then flip the coin again. Keep going in this manner, counting up the total number of tails you see before you hit heads.
 
 - Below is the start of some code to construct this procedure, fill in the rest:
 
