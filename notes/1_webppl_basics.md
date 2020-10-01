@@ -176,10 +176,10 @@ var addnMaker = function(n) {
 }
 
 var add2 = addnMaker(2) // This is a function that adds 2 to a number
-display(add2(3))
+display("3 + 2 = " + add2(3))
 
 var add3 = addnMaker(3) // This is a function that adds 3 to a number
-display(add3(3))
+display("3 + 3 = " + add3(3))
 ```
 
 ## Some useful keyboard shortcuts for use in [webppl.org](http://webppl.org)

@@ -52,6 +52,34 @@ viz(repeat(1000,flippingAway))
 ## Sample from probability distributions
 
 - WebPPL has a number of probability distributions that we can simply sample from. Below are some examples, the full list can be found here: [http://docs.webppl.org/en/master/distributions.html](http://docs.webppl.org/en/master/distributions.html)
+- We can define a distribution to sample from using the capital letter format, then can sample from that distribution using the `sample` function
+
+```javascript
+var myGaussian = Gaussian({mu: 50, sigma: 10}) // mean 50, sd 10
+display(sample(myGaussian))
+
+var myExponential = Exponential({a: 1}) // rate 1
+display(sample(myExponential))
+```
+
+- You can also get out the log-likelihood of an observation under a distribution using the `score` method.
+
+```javascript
+var myGaussian = Gaussian({mu: 50, sigma: 10})
+display(myGaussian.score(40)) // The Log-PDF of observing 40 from this distribution
+```
+
+- If you only want to take a single sample (and not worry about scoring), lower case distribution formats let you do this with a single function call. For instance, the two snippets below are identical:
+
+```javascript
+// Long-form sampling
+var myGaussian = Gaussian({mu: 50, sigma: 10})
+display(sample(myGaussian))
+
+// Short-form sampling
+display(gaussian(50, 10))
+```
+
 
 ```javascript
 var strengthGaussian = gaussian(50,10) //Gaussian strength
