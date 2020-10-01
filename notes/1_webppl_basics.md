@@ -158,13 +158,28 @@ sayHi()
 
 ## Higher order functions
 
-- Higher order functions are functions that take other functions as their input.
+- Higher order functions are functions that take other functions as their input or use them as the output.
 - For example, `map` is such a higher order function. It takes another function as an argument, and applies that function to a list of arguments in turn.
 
 ```javascript
 var mySquare = function(x){return x*x}
 var someNumbers = [1,2,3,4]
 display(map(mySquare, someNumbers))
+```
+
+- Another example of higher order functions is functions that return other functions.
+- For example, the `addnMaker` function below returns functions that add specific numbers, which are defined in the maker function:
+
+```javascript
+var addnMaker = function(n) {
+	return function(x) {return x + n}
+}
+
+var add2 = addnMaker(2) // This is a function that adds 2 to a number
+display(add2(3))
+
+var add3 = addnMaker(3) // This is a function that adds 3 to a number
+display(add3(3))
 ```
 
 ## Some useful keyboard shortcuts for use in [webppl.org](http://webppl.org)
