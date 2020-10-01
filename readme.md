@@ -10,7 +10,7 @@ Please contact Tobias Gerstenberg ([gerstenberg@stanford.edu](mailto:gerstenberg
 
 ## Slides
 
-- Presentation slides in .ppt
+- Presentation slides in .pdf
 
 ## Notes
 
