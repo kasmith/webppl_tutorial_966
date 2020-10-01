@@ -78,7 +78,7 @@ var instructors = ["Kevin","Josh"]
 instructors[0] = "Jim"
 ```
 
-- This also means that a variable must be assigned to as soon as it's declared. So the following construct often used in Javascript won't work either:
+- This also means that a variable must be assigned to as soon as it's declared. So assigning variables within an if statement -- often used in Javascript -- won't work either:
 
 ```javascript
 // THIS WON'T RUN!!!
