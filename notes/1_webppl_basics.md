@@ -67,6 +67,40 @@ if (kevin.strength > 5){
 kevin.lazy ? display("Kevin is lazy!") : display("Kevin is not lazy!")
 ```
 
+## Limitations of variable assignment
+
+- WebPPL has limitations on how variable assignment works. In general, once you've assigned a variable *it can't be changed*.
+- This is important because you can't edit arrays once you've initialized them. So the following code -- which works in Javascript -- will throw an error in WebPPL:
+
+```javascript
+// THIS WON'T RUN!!!
+var instructors = ["Kevin","Josh"]
+instructors[0] = "Jim"
+```
+
+- This also means that a variable must be assigned to as soon as it's declared. So the following construct often used in Javascript won't work either:
+
+```javascript
+// THIS WON'T RUN!!!
+var tutor = "Kevin"
+var effective
+if (tutor == 'Kevin') {
+	effective = "no"
+} else {
+	effective = "yes"
+}
+display(effective)
+```
+
+- Instead, this is where the `?` operator shines.
+
+```javascript
+var tutor = "Kevin"
+var effective = (tutor == "Kevin" ? "no" : "yes")
+display(effective)
+```
+
+
 ## Defining functions
 
 - We use the `function()` primitive to define functions.
@@ -155,12 +189,12 @@ var josh = {
 	firstName: "Josh", lastName: "Tenenbaum", strength: 12
 }
 
-var andrei = {
-	firstName: "Andrei", lastName: "Barbu", strength: 12
+var joao = {
+	firstName: "Joao", lastName: "Loula", strength: 12
 }
 
-var andy = {
-	firstName: "Andy", lastName: "Banburski", strength: 12
+var cathy = {
+	firstName: "Cathy", lastName: "Wong", strength: 12
 }
 ```-->
 
@@ -183,7 +217,7 @@ showStrength(kevin)
 
 ```javascript
 // Map the showStrength() function onto a group
-var everyone = [kevin, josh, andrei, andy]
+var everyone = [kevin, josh, joao, cathy]
 display("Everyone's strengths:")
 map(showStrength, everyone)
 ```-->
@@ -204,7 +238,7 @@ var returnWinner = function(personA, personB){
 	}
 }
 
-display(returnWinner(kevin, andrei) + " won a tug of war")
-display(returnWinner(andrei, andy) + " won a tug of war")
+display(returnWinner(kevin, joao) + " won a tug of war")
+display(returnWinner(joao, cathy) + " won a tug of war")
 
 ```-->

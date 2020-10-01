@@ -175,12 +175,12 @@ var tugWinner = function(person1, person2) {
 		return str1 > str2 ? person1 : person2
 	}
 }
-display("The winner between Kevin and Andrei is: " + tugWinner('kevin', 'andrei'))
+display("The winner between Kevin and Tiwalayo is: " + tugWinner('kevin', 'tiwalayo'))
 display("The winner between Kevin and Josh is: " + tugWinner('kevin', 'josh'))
-display("The winner between Andrei and Josh is: " + tugWinner('andrei', 'josh'))
+display("The winner between Tiwalayo and Josh is: " + tugWinner('tiwalayo', 'josh'))
 
 display ("Kevin's strength is: " + strength('kevin'))
-display ("Andrei's strength is: " + strength('andrei'))
+display ("Tiwalayo's strength is: " + strength('tiwalayo'))
 display ("Josh's strength is: " + strength('josh'))
 ```
 

@@ -82,7 +82,7 @@ viz(dist)
 
 - In the previous examples, we used rejection sampling (`method: 'rejection'`) to do inference.
 - WebPPL implements a number of inference procedures. You can find out more about these here: [http://webppl.readthedocs.io/en/master/inference/methods.html](http://webppl.readthedocs.io/en/master/inference/methods.html)
-- In general, you will **not** want to use rejection sampling. For simple models, the `MCMC` method is usually good enough to get by without the drawbacks of rejection sampling.
+- In general, you will **not** want to use rejection sampling. For simple models, the `MCMC` method is usually good enough to get by without the drawbacks of rejection sampling. And if it's incredibly simple, exact inference via enumeration (`method: 'enumerate'`) is often better.
 - Here is how you can use MCMC instead of rejection sampling (note you also need the `kernel` argument for this method):
 
 ```javascript
