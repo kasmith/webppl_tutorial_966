@@ -80,12 +80,9 @@ display(sample(myGaussian))
 display(gaussian(50, 10))
 ```
 
+- We can also easily combine distributions to make new ones.
 
 ```javascript
-var strengthGaussian = gaussian(50,10) //Gaussian strength
-var strengthExponential = exponential(1) //Exponential strength
-
-// we can easily combine distributions to make complex new ones
 var whatIsThisEven = function(){
 	Math.pow(Math.abs(gaussian(0,1)), uniform(0,1)*exponential(1))
 }
